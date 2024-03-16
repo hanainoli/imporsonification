@@ -9,3 +9,8 @@ Flask
 pydub
 gunicorn
 ffmpeg
+
+librosa
+numpy
+scikit-learn
+

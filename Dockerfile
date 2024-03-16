@@ -16,6 +16,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the FastAPI application files into the container
 COPY app.py .
+COPY trained_model.h5 .
 
 # Expose the port on which your FastAPI application will run
 EXPOSE 5000
