@@ -17,4 +17,7 @@ docker tag impersonation  hanainoli/impersonation:1
 docker push hanainoli/impersonation:1
 
 
+git remote set-url origin https://github.com/hanainoli/imporsonification.git
+
+
 
