@@ -9,7 +9,15 @@ from tensorflow.keras.models import load_model
 
 app = Flask(__name__)
 
-@app.route('/process_audio', methods=['POST'])
+@app.route('/heartbeat')
+def heartbeat():
+    return 'OK'
+
+@app.route('/ping')
+def ping():
+    return 'OK'
+
+@app.route('/voice/analyze', methods=['POST'])
 def process_audio():
     if 'file' not in request.files:
         return jsonify({'error': 'No file part'})
@@ -29,7 +37,7 @@ def process_audio():
                 # Process the audio file (Example: Getting duration)
                 model = load_model('trained_model.h5')
                 # audio = AudioSegment.from_file(temp_audio_path)
-                response_data = analyze_speech(audio_file, model)
+                response_data = analyze_speech(temp_audio_path, model)
 
                 # You can perform any other processing here...
 

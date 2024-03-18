@@ -7,6 +7,11 @@ docker logs impersonation
 
 docker  stop <container name>
 
+docker tag impersonation hanainoli/impersonation:1
+
+docker push hanainoli/impersonation:1
+
+
 docker container prune
 
 docker ps -a
